@@ -1,0 +1,18 @@
+["variables.json"]
+vcenter_server = "vault:secret/packer/centos8:vcenter_server"
+vcenter_username = "vault:secret/packer/centos8:vcenter_username"
+vcenter_password = "vault:secret/packer/centos8:vcenter_password"
+vcenter_cluster = "vault:secret/packer/centos8:vcenter_cluster"
+vcenter_network = "vault:secret/packer/centos8:vcenter_network"
+vcenter_datastore = "vault:secret/packer/centos8:vcenter_datastore"
+vcenter_folder = "Templates"
+vcenter_iso_datastore = "HDD1"
+vcenter_iso_path ="ISO/CentOS-8.2.2004-x86_64-dvd1.iso"
+vm_name = "centos-8-base"
+vm_disk = "32768"
+vm_cpus = "2"
+vm_memory= "4096"
+packer_password = "vault:secret/packer-templates/centos-8-base:password"
+
+["http\ks.cfg"]
+packer_password = "vault:secret/packer-templates/centos-8-base:password"
