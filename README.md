@@ -6,6 +6,8 @@ This template is designed to be run in an automated pipeline, that uses [octomer
 * Run `octomerge vars.toml -x` to merge the variable values from `vars.toml` to respective templates (`variables.json.template` and `http/ks.cfg.template`)
 * Run `packer build -force -var-file variables.json centos-8-base.json`
 
+The packer template serves the preseed file on a particular port, because in my case there is a firewall between packer and vSphere, so I need a particular port for the firewall rule. `preseed_http_ip` is usuful when the packer run is started from a container to specify the external IP, that packer otherwise would not know.
+
 It is assumed that you have put the ISO file at the datastore and path you configured with `vcenter_iso_datastore` and `vcenter_iso_path` variables in `vars.toml`.
 
 The `test` folder can be used for running this outside of an automated pipeline. Check `test.toml` for the correct path to your `vars.toml` in vault. Copy all the files from there to the root of the repository and run `test.cmd`. You'll need to have `packer` and `octomerge` on your path and you need to be logged it to Vault.

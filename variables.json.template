@@ -11,6 +11,7 @@
   "packer_password": "#{packer_password}",
   "preseed_port_min": "#{preceed_port_min}",
   "preseed_port_max": "#{preceed_port_max}",
+  "preseed_http_ip": "#{preseed_http_ip}",
   "vm_name": "#{vm_name}",
   "vm_disk": "#{vm_disk}",
   "vm_cpus": "#{vm_cpus}",

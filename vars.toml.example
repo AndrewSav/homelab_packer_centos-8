@@ -12,6 +12,9 @@ vm_name = "centos-8-base"
 vm_disk = "32768"
 vm_cpus = "2"
 vm_memory= "4096"
+preceed_port_min = "vault:secret/packer/centos8:preceed_port_min"
+preceed_port_max = "vault:secret/packer/centos8:preceed_port_max"
+preceed_http_ip = "vault:secret/packer/centos8:preceed_http_ip"
 packer_password = "vault:secret/packer-templates/centos-8-base:password"
 
 ["http\ks.cfg"]

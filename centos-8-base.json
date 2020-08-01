@@ -9,6 +9,7 @@
       ],
       "cluster": "{{user `vcenter_cluster`}}",
       "http_directory": "http",
+      "http_ip": "{{user `preseed_http_ip`}}",
       "http_port_min": "{{user `preseed_port_min`}}",
       "http_port_max": "{{user `preseed_port_max`}}",
       "convert_to_template": "true",
